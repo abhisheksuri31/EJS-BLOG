@@ -1,0 +1,13 @@
+<%- include("PARTIALS/header")-%>
+
+<h1>HOME</h1>
+<p><%=homestartingcontent%></p>
+
+<% posts.map((post)=>{ %>
+
+<h2><%=post.blogtitle%></h2>
+<p><%=post.blogmessage.substring(0,99)%><a href="/posts/<%=post._id%>"> .......READ MORE</a></p>
+<% }) %>
+
+
+<%- include("PARTIALS/footer")-%>
